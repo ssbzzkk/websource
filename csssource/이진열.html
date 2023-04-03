@@ -84,12 +84,30 @@
         border-radius: 5px;
         background-color: #eee;
       }
+      h2 {
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+li:hover {
+  color: red;
+}
     </style>
   </head>
 
   <body>
     <div class="welcome">
-      <h2>이진열</h2>
+      <h1>이진열</h1>
       <p class="subtitle">C# 개발자 & AI 전문가</p>
       <p>환영합니다!</p>
       <div class="weather-info">
@@ -104,10 +122,10 @@
         <div class="child" style="color: slateblue; background: beige; display: flex; flex-direction: column; align-items: center; justify-content: center;">
           <h2 style="font-size: 28px; margin-bottom: 16px;">성을 쌓는 자는 망하고 길을 내는 자는 흥한다.</h2>
           <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-            <img class="img-class" src="https://images.unsplash.com/photo-1574290467726-32a0d4e2bdbb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZGV2ZWxvcGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="Developer" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 200px; height: 200px;">
-<img class="img-class" src="https://images.unsplash.com/photo-1530520543123-a6f86b6bafa5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aW5ub3ZhdGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="Innovative" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 200px; height: 200px;">
-<img class="img-class" src="https://images.pexels.com/photos/38630/office-business-colleagues-meeting-38630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Entrepreneurial" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 200px; height: 200px;">
-<img class="img-class" src="https://images.unsplash.com/photo-1505843516132-6c6f9d9c2c96?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFuaWVsJTIwcHJvZ3JhbSUyMG1pdGlnYWxsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="Dynamic" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 200px; height: 200px;">
+            <img class="img-class" src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Innovative" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 200px; height: 200px;">
+            <img class="img-class" src="https://media.istockphoto.com/id/1383963898/ko/%EC%82%AC%EC%A7%84/%EA%B8%B0%EC%88%A0-%EC%95%84%EC%9D%B4%EC%BD%98%EC%9D%80-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%BD%94%EB%93%9C%EB%A5%BC-%ED%86%B5%ED%95%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EC%A0%84%EC%86%A1%ED%95%A9%EB%8B%88%EB%8B%A4.jpg?s=612x612&w=is&k=20&c=qSvoT6KZI7RIUVUDGql7kVioD8Py7UpMqEnIeHEzzH8=" alt="Developer" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 200px; height: 200px;">
+            <img class="img-class" src="https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Dynamic" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 200px; height: 200px;">
+            <img class="img-class" src="https://cdn.pixabay.com/photo/2019/08/06/22/48/artificial-intelligence-4389372_960_720.jpg" alt="Entrepreneurial" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 200px; height: 200px;">
 
           </div>
         </div>
@@ -115,7 +133,7 @@
       <div class="child" style="background: #cce5ff">
         <h3 style="color: navy; font-weight: bold;">나의 자랑 (My Portfolio)</h3>
         <ul style="list-style-type: square;">
-          <li style="color: blue">1. 정통부 2022 AI 경연대회 개인자격으로 참가 22위.</li>
+          <li style="font-size: 16px; transition: all 0.3s;">1. 정통부 2022 AI 경연대회 개인자격으로 참가 22위.</li>
           <li style="font-size: 16px; transition: all 0.3s;">2. 사용 가능 언어: C계열(C#, C, C++, MFC), Python, HTML, CSS, Javascript, Fortran. (C#: my favorite)</li>
           <li style="font-size: 16px; transition: all 0.3s;">3. OPC UA/DA Sample Programming 제작 및 유포 (포스코/현대제철/동국제강)</li>
           <li style="font-size: 16px; transition: all 0.3s;">4. Case별 AI Application Prototype 제작 및 Test (Scikit-Learn/Keras/Tensorflow and so on)</li>
