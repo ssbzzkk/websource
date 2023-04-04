@@ -85,8 +85,12 @@
         background-color: #eee;
       }
       h2 {
-  animation: heartbeat 1s infinite;
+  animation: heartbeat 1.5s infinite;
 }
+  h3{
+    font-weight: bolder;
+    color: navy;
+  }
 
 @keyframes heartbeat {
   0% {
@@ -101,6 +105,12 @@
 }
 li:hover {
   color: red;
+}
+ul{
+  list-style: none;
+}
+li{
+  list-style: none;
 }
     </style>
   </head>
@@ -120,127 +130,131 @@ li:hover {
 
     <div class="parent" style="width: 100%; height: 300px">
         <div class="child" style="color: slateblue; background: beige; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-          <h2 style="font-size: 28px; margin-bottom: 16px;">성을 쌓는 자는 망하고 길을 내는 자는 흥한다.</h2>
+          <h2 style="font-size: 18px; margin-bottom: 16px;">성을 쌓는 자는 망하고 길을 내는 자는 흥한다.</h2>
           <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-            <img class="img-class" src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Innovative" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 200px; height: 200px;">
-            <img class="img-class" src="https://media.istockphoto.com/id/1383963898/ko/%EC%82%AC%EC%A7%84/%EA%B8%B0%EC%88%A0-%EC%95%84%EC%9D%B4%EC%BD%98%EC%9D%80-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%BD%94%EB%93%9C%EB%A5%BC-%ED%86%B5%ED%95%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EC%A0%84%EC%86%A1%ED%95%A9%EB%8B%88%EB%8B%A4.jpg?s=612x612&w=is&k=20&c=qSvoT6KZI7RIUVUDGql7kVioD8Py7UpMqEnIeHEzzH8=" alt="Developer" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 200px; height: 200px;">
-            <img class="img-class" src="https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Dynamic" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 200px; height: 200px;">
-            <img class="img-class" src="https://cdn.pixabay.com/photo/2019/08/06/22/48/artificial-intelligence-4389372_960_720.jpg" alt="Entrepreneurial" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 200px; height: 200px;">
+            <img class="img-class" src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Innovative" style="border: 8px ridge wheat; margin: 8px; object-fit: cover width: 50px; height: 50px;">
+            <img class="img-class" src="https://media.istockphoto.com/id/1383963898/ko/%EC%82%AC%EC%A7%84/%EA%B8%B0%EC%88%A0-%EC%95%84%EC%9D%B4%EC%BD%98%EC%9D%80-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%BD%94%EB%93%9C%EB%A5%BC-%ED%86%B5%ED%95%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EC%A0%84%EC%86%A1%ED%95%A9%EB%8B%88%EB%8B%A4.jpg?s=612x612&w=is&k=20&c=qSvoT6KZI7RIUVUDGql7kVioD8Py7UpMqEnIeHEzzH8=" alt="Developer" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 50px; height: 50px;">
+            <img class="img-class" src="https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Dynamic" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 50px; height: 50px;">
+            <img class="img-class" src="https://cdn.pixabay.com/photo/2019/08/06/22/48/artificial-intelligence-4389372_960_720.jpg" alt="Entrepreneurial" style="border: 8px ridge wheat; margin: 8px; object-fit: cover; width: 50px; height: 50px;">
 
           </div>
         </div>
       </div>
       <div class="child" style="background: #cce5ff">
-        <h3 style="color: navy; font-weight: bold;">나의 자랑 (My Portfolio)</h3>
+        <h3>나의 자랑 (My Portfolio)</h3>
         <ul style="list-style-type: square;">
-          <li style="font-size: 16px; transition: all 0.3s;">1. 정통부 2022 AI 경연대회 개인자격으로 참가 22위.</li>
-          <li style="font-size: 16px; transition: all 0.3s;">2. 사용 가능 언어: C계열(C#, C, C++, MFC), Python, HTML, CSS, Javascript, Fortran. (C#: my favorite)</li>
-          <li style="font-size: 16px; transition: all 0.3s;">3. OPC UA/DA Sample Programming 제작 및 유포 (포스코/현대제철/동국제강)</li>
-          <li style="font-size: 16px; transition: all 0.3s;">4. Case별 AI Application Prototype 제작 및 Test (Scikit-Learn/Keras/Tensorflow and so on)</li>
-          <li style="font-size: 16px; transition: all 0.3s;">5. 사우디 아람코 유황이송설비 DCS/PLC 설계/Test</li>
-          <li style="font-size: 16px; transition: all 0.3s;">6. 포스코 경관조명 TF팀장 및 제어시스템 최초 개발 (KBS 애국가 영상으로 방영)</li>
-          <li style="font-size: 16px; transition: all 0.3s;">7. 철강제품 내부흠 Online 이미지화 구현 (Sensor -> 비글본 -> 관제시스템)</li>
-          <li style="font-size: 16px; transition: all 0.3s;">8. 순수 Protocol 기반 LS PLC 통신 Program 개발</li>
+          <li>1. 정통부 2022 AI 경연대회 개인자격으로 참가 22위.</li>
+          <li>2. 사용 가능 언어: C계열(C#, C, C++, MFC), Python, HTML, CSS, Javascript, Fortran. (C#: my favorite)</li>
+          <li>3. OPC UA/DA Sample Programming 제작 및 유포 (포스코/현대제철/동국제강)</li>
+          <li>4. Case별 AI Application Prototype 제작 및 Test (Scikit-Learn/Keras/Tensorflow and so on)</li>
+          <li>5. 사우디 아람코 유황이송설비 DCS/PLC 설계/Test</li>
+          <li>6. 포스코 경관조명 TF팀장 및 제어시스템 최초 개발 (KBS 애국가 영상으로 방영)</li>
+          <li>7. 철강제품 내부흠 Online 이미지화 구현 (Sensor -> 비글본 -> 관제시스템)</li>
+          <li>8. 순수 Protocol 기반 LS PLC 통신 Program 개발</li>
         </ul>
       </div>
       <div class="child" style="overflow: scroll; background: lightgreen">
-        ▨ 청춘을 돌려다오(경력/이력)
-        <li>&nbsp; 1. 대구고등학교 졸업(1978.1)</li>
-        <li>&nbsp; 2. 경북대학교 전자공학과 졸업(1982.2)</li>
-        <li>&nbsp; 3. 해군 OCS 73차 임관(1982.7)</li>
-        <li>&nbsp; 4. 대우전자(1985~1986)</li>
-        <li>&nbsp; 5. 포스코(1987.7~2014.10)</li>
-        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o 주물선 고로 설비전산화(팀원)</li>
-        <li>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Coke공장 설비전산화(Prject Manager)
-        </li>
-        <li>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Coke공장 이동기기 자동화(Prject
-          Manager)
-        </li>
-        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o 포항제철소 경관조명 TF 팀장</li>
-        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o 자동화 기술팀장</li>
-        <li>&nbsp; 6. 포스코 건설(2014.11~2017.12)</li>
-        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o 미국 GTL 공장 건설 Project</li>
-        <li>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o 사우디 아람코 유황 이송설비 건설
-        </li>
-        <li>&nbsp; 7. 엔시스템 연구소장(2020.8~2022.10)</li>
+        <h3>청춘을 돌려다오(경력/이력)</h3>
+        <ul>
+          <li> 1. 대구고등학교 졸업(1978.1)</li>
+          <li> 2. 경북대학교 전자공학과 졸업(1982.2)</li>
+          <li> 3. 해군 OCS 73차 임관(1982.7)</li>
+          <li> 4. 대우전자(1985~1986)</li>
+          <li> 5. 포스코(1987.7~2014.10)</li>
+          <li>o 주물선 고로 설비전산화(팀원)</li>
+          <li>
+            o Coke공장 설비전산화(Prject Manager)
+          </li>
+          <li>
+            o Coke공장 이동기기 자동화(Prject
+            Manager)
+          </li>
+          <li>o 포항제철소 경관조명 TF 팀장</li>
+          <li>o 자동화 기술팀장</li>
+          <li> 6. 포스코 건설(2014.11~2017.12)</li>
+          <li>o 미국 GTL 공장 건설 Project</li>
+          <li>
+            o 사우디 아람코 유황 이송설비 건설
+          </li>
+          <li> 7. 엔시스템 연구소장(2020.8~2022.10)</li>
+        </ul>
       </div>
     </div>
     <hr />
 
     <div id="leftdiv">
-      &nbsp;▨ 내가 좋아하는 책
-      <li>&nbsp; o 인공지능 교과서(성안당): 알파고 원리는 감동.</li>
-      <li>&nbsp; o 청소년을 위한 초한지(평단): 역사공부 시작.</li>
-      <li>&nbsp; o 관계의 비밀(북하우스): 심리학 교과서.</li>
-      <li>&nbsp; o Python(성안당): Tensorflow, Keras 등.</li>
-      <li>&nbsp; o 이야기 현현기경(한국기원): 우뇌를 자극한다.</li>
-      <li>&nbsp; o 철학정원(한겨레출판): 철학이란 무엇일까?</li>
-      <li>&nbsp; o MELSEC PLC 프로그램 기조와 응용(광문각).</li>
-      <li>&nbsp; o JavaScript 200제(정보문화사): 다양한 예제.</li>
-      <li>&nbsp; o C Sharp for Artist: Download 가능.</li>
-      <li>&nbsp; o C# 200제(정보문화사): 다양한 예제.</li>
+      <h3>▨ 내가 좋아하는 책</h3>
+      <ul>
+        <li> o 인공지능 교과서(성안당): 알파고 원리는 감동.</li>
+        <li> o 청소년을 위한 초한지(평단): 역사공부 시작.</li>
+        <li> o 관계의 비밀(북하우스): 심리학 교과서.</li>
+        <li> o Python(성안당): Tensorflow, Keras 등.</li>
+        <li> o 이야기 현현기경(한국기원): 우뇌를 자극한다.</li>
+        <li> o 철학정원(한겨레출판): 철학이란 무엇일까?</li>
+        <li> o MELSEC PLC 프로그램 기조와 응용(광문각).</li>
+        <li> o JavaScript 200제(정보문화사): 다양한 예제.</li>
+        <li> o C Sharp for Artist: Download 가능.</li>
+        <li> o C# 200제(정보문화사): 다양한 예제.</li>
+      </ul>
     </div>
 
     <div id="rightdiv" style="color: orangered; font-style: italic">
-      《 ◑ <strong>만 장의 글보다는 한 장의 그림으로 설득하라.</strong> 》
+      <h3>만 장의 글보다는 한 장의 그림으로 설득하라.</h3>
       <div class="item-wrapper">
         <div class="item">
           <img src="deepLearning.png" />
           <div>
-            &nbsp;《 수기 Data DeepLearning AI Model 》<br />
-            &nbsp;&nbsp;- IDE: anaconda<br />
-            &nbsp;&nbsp;- tool: tensorflow, keras
+            《 수기 Data DeepLearning AI Model 》<br />
+            - IDE: anaconda<br />
+            - tool: tensorflow, keras
           </div>
         </div>
         <div class="item">
           <img src="irisData.png" />
           <div>
-            &nbsp;《 iris Data 비지도 학습 Moodel 》<br />
-            &nbsp;&nbsp;- 알고리즘: k-평균 클러스트링<br />
-            &nbsp;&nbsp;- tool: Scikit-Learn
+            《 iris Data 비지도 학습 Moodel 》<br />
+            - 알고리즘: k-평균 클러스트링<br />
+            - tool: Scikit-Learn
           </div>
         </div>
         <div class="item">
           <img src="multOPCinterface.png" />
           <div>
-            &nbsp;《 multi-OPC Server Interface 》<br />
-            &nbsp;&nbsp;- IDE: Visual Studio<br />
-            &nbsp;&nbsp;- tool: C++, MFC
+            《 multi-OPC Server Interface 》<br />
+            - IDE: Visual Studio<br />
+            - tool: C++, MFC
           </div>
         </div>
         <div class="item">
           <img src="opcUAinterface.png" />
           <div>
-            &nbsp;《 OPC UA Protocol Interface 》<br />
-            &nbsp;&nbsp;- IDE: Visual Studio<br />
-            &nbsp;&nbsp;- tool: C#, Server: OI Server
+            《 OPC UA Protocol Interface 》<br />
+            - IDE: Visual Studio<br />
+            - tool: C#, Server: OI Server
           </div>
         </div>
         <div class="item">
           <img src="calHouse.png" />
           <div>
-            &nbsp;《 ML 다중회귀 분석 Model 》<br />
-            &nbsp;&nbsp;- Data: California 주택가격<br />
-            &nbsp;&nbsp;- tool: Scikit-Learn, anaconda
+            《 ML 다중회귀 분석 Model 》<br />
+            - Data: California 주택가격<br />
+            - tool: Scikit-Learn, anaconda
           </div>
         </div>
         <div class="item">
           <img src="cokeData.png" />
           <div>
-            &nbsp;《 Coke Imaga Data 추출 》<br />
-            &nbsp;&nbsp;- 목적: AI Model 학습Data 확보<br />
-            &nbsp;&nbsp;- tool: Visual Studio, C#
+            《 Coke Imaga Data 추출 》<br />
+            - 목적: AI Model 학습Data 확보<br />
+            - tool: Visual Studio, C#
           </div>
         </div>
         <div class="item">
           <img src="inFoult.png" />
           <div>
-            &nbsp;《 제품 내부흠 정보 Image화 》<br />
-            &nbsp;&nbsp;- 목적: 제품 내부 결함 측정<br />
-            &nbsp;&nbsp;- tool: Visual Studio, C#
+            《 제품 내부흠 정보 Image화 》<br />
+            - 목적: 제품 내부 결함 측정<br />
+            - tool: Visual Studio, C#
           </div>
         </div>
       </div>

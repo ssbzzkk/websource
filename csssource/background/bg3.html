@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 영역보다 이미지가 작은경우 */
+      /*body {
+      }
+       div {
+        background-image: url("bg.png");
+        background-repeat: no-repeat;
+        background-position: 10px 40%;
+        width: 300px;
+        height: 300px;
+        border: 1px solid red;
+      } 
+      p {
+        line-height: 30px;
+      }*/
+
+      /* 영역보다 이미지가 큰 경우 */
+      .bg1 {
+        width: 500px;
+        height: 500px;
+        background-image: url(bg4.jpg);
+        background-size: 100% 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--배경색과 배경 이미지
+      채우려는 요소 크기보다 작을 경우 가로, 세로 반복으로 채우게 됨
+
+      background-repeat: repeat(기본), repeat-x, repeat-y, no-repeat
+      background-position : 가로 세로
+          가로 : left, right, center, 백분율, 길이 / 세로 : top, bottom, center, 백분율, 길이
+      
+      background size: auto(기본), contain(요소 안에 배경 이미지가 다 들어오도록 확대/축소)
+                        cover(요소 전체를 덮도록 확대/축소)
+        -->
+    <div>
+      <h1>초콜릿</h1>
+      <p>
+        초콜릿은 맛있다 초콜릿은 맛있다 초콜릿은 맛있다 초콜릿은 맛있다 초콜릿은
+        맛있다초콜릿은 맛있다 초콜릿은 맛있다 초콜릿은 맛있다 초콜릿은 맛있다
+        초콜릿은 맛있다초콜릿은 맛있다 초콜릿은 맛있다 초콜릿은 맛있다 초콜릿은
+      </p>
+    </div>
+    <div class="bg1"></div>
+  </body>
+</html>
+dd.tee${djkl}*10
