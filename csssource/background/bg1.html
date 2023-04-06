@@ -7,10 +7,10 @@
     <title>Document</title>
     <style>
       body {
-        background-color: #222222;
+        background: #222222;
       }
       .text1 {
-        color: rgba(1, 24, 21, 0.959);
+        color: rgb(255, 255, 255);
       }
       .text2 {
         color: rgba(255, 255, 255, 0.8);
@@ -26,17 +26,21 @@
   <body>
     <!--
         웹에서 색상 표현
-        1) 16진수 표기법 : #000000, (0~9, 10:a, 11:b, 12:c, 13:d, 14:e, 15:f)
-        2) rgb, rgba 표기법 :   rgb(255,0,0) => rgb(red, green, blue), 
-                                rgba(255,0,0,0.5) => rbga(red, green, blue, alpha)
-                                alpha 값 => 0~1 사이의 값 사용(1은 완전 불투명)
-        3) hsl, hsla 표기법 : hsl(360,100%,0%) => hsl(hue(색상), saturation(채도), lightness(명도))
-                            hsla => alpha값 개념 동일
-        4) 색상명 : aqua, blue, black, navy...
+        1) 16진수 표기법 : #00ff00, (0~9, 10:a, 11:b, 12:c, 13:d, 14:e, 15:f)
+        2) rgb, rgba 표기법 : 
+            rgb(255,0,0) => rgb(red값,green값,blue값), 
+            rgba(255,0,0,0.5) => rgba(red값,green값,blue값,alpha값)
+              alpha 값 => 0~1 사이의 값 사용(1은 완전 불투명)
+        3) hsl, hsla 표기법
+            hsl(360,100%,0%) => hsl(hue값,saturation값,lightness값)
+                                    색상,      채도,       명도
+            hsla(hue값,saturation값,lightness값,alpha값)
+        4) 색상명
+            aqua, blue, black, navy....
     -->
-    <h1 class="text1">HTML5+CSS3</h1>
-    <h1 class="text2">HTML5+CSS3</h1>
-    <h1 class="text3">HTML5+CSS3</h1>
-    <h1 class="text4">HTML5+CSS3</h1>
+    <h1 class="text1">HTML5 + CSS3</h1>
+    <h1 class="text2">HTML5 + CSS3</h1>
+    <h1 class="text3">HTML5 + CSS3</h1>
+    <h1 class="text4">HTML5 + CSS3</h1>
   </body>
 </html>

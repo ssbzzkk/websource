@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>가상요소</title>
+    <title>선택자</title>
     <style>
-      H3::before {
+      h3::before {
         content: "";
         width: 10px;
         height: 10px;
@@ -25,9 +25,10 @@
         padding: 2px 4px;
         margin: 0 10px;
         border-radius: 2px;
-        background-color: red;
+        background-color: #f00;
         color: #fff;
       }
+
       h1 {
         color: #000;
       }
@@ -44,45 +45,51 @@
         2) 전체 선택자
         3) 클래스 선택자
         4) 아이디 선택자 : 한 페이지 내에서 중복 불가(에러는 나지 않음)
-        5) 자손(하위) 선택자 : 부모 자손(자식+손자) (공백으로 구분)
+        5) 자손(하위) 선택자 : 부모 자손(자식 + 손자)
                               div h2
         6) 자식 선택자 : 부모 > 자식  div > h2
-        7) 인접 형제 선택자 : +(바로 따라나오는), ~(모든)
+        7) 인접 형제 선택자 : +, ~
         8) 그룹화
         9) 속성 선택자 : [속성]
-            [속성 = 값] : 특정 값을 갖는 속성에 스타일 지정
-            [속성 ~= 값] : 특정 값을 포함하는 속성에 스타일 지정
-            [속성 |= 값] : 위랑 동작은 비슷하나 값-시작하는 걸 추가로 선택해 줌
-            [속성 ^= 값] : 특정 값으로 시작하는 속성에 스타일 지정
-            [속성 $= 값] : 특정 값으로 끝나는 속성에 스타일 지정
-        10) 가상 클래스(pseudo class : 슈도 클래스) 선택자
-          :link : 방문하지 않은 링크에 스타일 적용
-          :visited : 방문한 링크에 스타일 적용
-          :hover : 웹 요소에 커서를 올려 놓을 때 스타일 적용
-          :active : 웹 요소를 활성화 했을 때 스타일 적용
-          :focus : 웹 요소에 초점이 맞춰졌을 때 스타일 적용
+           [속성 = 값] : 특정 값을 갖는 속성에 스타일 지정
+           [속성 ~= 값] : 여러 값 중 특정 값을 포함하는 속성에 스타일 지정
+           [속성 |= 값] : 위랑 동작은 비슷하나 값- 시작하는 걸 추가로 선택해 줌
+           [속성 ^= 값] : 특정 값으로 시작하는 속성에 스타일 지정
+           [속성 $= 값] : 특정 값으로 끝나는 속성에 스타일 지정
+        10) 가상 클래스(pseudo class : 슈도 클래스) 선택자 
+           :link : 방문하지 않은 링크에 스타일 적용
+           :visited : 방문한 링크에 스타일 적용
+           :hover : 웹 요소에 커서를 올려 놓을 때 스타일 적용
+           :active : 웹 요소를 활성화 했을 때 스타일 적용
+           :focus : 웹 요소에 초점이 맞춰졌을 때 스타일 적용
+
+           UI 요소 상태에 따른 가상 클래스
+           :enabled, :disabled
+           :checked
         11) 구조 가상 클래스 : 웹 문서 구조를 기준으로 특정 위치에 있는 요소를 찾아 스타일 지정
           :root
-          :nth-child(n)
-            => div p:nth-child(3), div p:nth-child(odd) : 홀수들만, div p:nth-child(2n+1) : 홀수들만
-            => div p:nth-child(evne) :짝수들만, div p:nth-child(2n) : 짝수들만
+          :nth-child(n) 
+            => div p:nth-child(3), div p:nth-child(odd), div p:nth-child(2n+1)
+            => div p:nth-child(even), div p:nth-child(2n)
+
           :nth-last-child(n)
           :first-child
           :last-child
-          :nth-of-type, nth-last-of-type(n)
+
+          :nth-of-type(n), nth-last-of-type(n)
           :first-of-type, last-of-type
           :only-child, :only-of-type
-        12) 가상 요소 : ::before, ::after => 내용 앞뒤에 콘텐츠 추가할때
-
+        12) 가상 요소 :  ::before, ::after => 내용 앞뒤에 콘텐츠 추가
     -->
-    <h1 id="title">css 기본 문법</h1>
+
+    <h1 id="title">CSS 기본 문법</h1>
     <h2>가상 요소 선택자</h2>
     <h3>가상 요소 선택자 활용</h3>
     <ul>
-      <li class="hot">제품A</li>
-      <li>제품B</li>
-      <li>제품C</li>
-      <li class="hot">제품D</li>
+      <li class="hot">제품 A</li>
+      <li>제품 B</li>
+      <li>제품 C</li>
+      <li class="hot">제품 D</li>
     </ul>
   </body>
 </html>

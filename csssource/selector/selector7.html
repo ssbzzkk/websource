@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>인접 형제 선택자</title>
+    <title>선택자</title>
     <style>
       /* div h1 + h2 {
         color: red;
       } */
+
       div h1 ~ h2 {
         color: red;
       }
@@ -25,13 +26,13 @@
         2) 전체 선택자
         3) 클래스 선택자
         4) 아이디 선택자 : 한 페이지 내에서 중복 불가(에러는 나지 않음)
-        5) 자손(하위) 선택자 : 부모 자손(자식+손자) (공백으로 구분)
+        5) 자손(하위) 선택자 : 부모 자손(자식 + 손자)
                               div h2
         6) 자식 선택자 : 부모 > 자식  div > h2
-        7) 인접 형제 선택자 : +(바로 따라나오는), ~(모든)
+        7) 인접 형제 선택자 : +, ~
     -->
     <div>
-      <h1 id="title">css 기본 문법</h1>
+      <h1 id="title">CSS 기본 문법</h1>
       <h2>인접 형제 선택자</h2>
       <h2>인접 형제 선택자</h2>
       <nav>
@@ -53,13 +54,13 @@
       </ul>
     </section>
 
-    <!-- ul>li*4 -->
-    <!-- ul>li{list Item$}*4 -->
+    <!-- ul>li{List Item$}*5 -->
     <ul>
-      <li>list Item1</li>
-      <li>list Item2</li>
-      <li>list Item3</li>
-      <li>list Item4</li>
+      <li>List Item1</li>
+      <li>List Item2</li>
+      <li>List Item3</li>
+      <li>List Item4</li>
+      <li>List Item5</li>
     </ul>
   </body>
 </html>

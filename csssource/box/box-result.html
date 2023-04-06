@@ -4,76 +4,80 @@
     <meta charset="utf-8" />
     <title>애완견 돌보기</title>
     <style>
+      /* body 전체 글꼴 지정하기 : 맑은 고딕, 고딕, 굴림 */
       body {
         font-family: "맑은 고딕", "고딕", "굴림";
       }
-      /* header : width:80%, 배경색:#069, 안쪽여백:10px */
+      /* header : width:80%, 배경색: #069, 안쪽여백 : 10px */
       header {
         width: 80%;
-        background-color: #069;
+        background: #069;
         padding: 10px;
       }
-      /* h1 width 40%, 글자색 white */
+      /* h1 : width:40%, 글자색: white */
       header h1 {
         width: 40%;
-        color: white;
+        color: #fff;
       }
-      /* nav width 60% */
+      /* nav : width:60% */
       header nav {
         width: 60%;
       }
-      /* ul 블릿기호 없애기 */
+      /* ul : 블릿기호 없애기 */
       nav ul {
-        list-style: none; /*list-style-type:none*/
+        list-style: none; /* list-style-type:none */
       }
-      /* ul안 a 요소 : 색상 흰색, 밑줄 없애기 */
+      /* ul 안 a 요소 : 색상 흰색, 밑줄 없애기 */
       nav ul li a {
         color: white;
         text-decoration: none;
       }
-      /* p요소 : 글자크기 15px, 줄높이 20px */
-      p {
-        size: 15px;
+      /* p 요소 : 글자크기 15px, 줄높이 20px */
+      footer p {
+        font-size: 15px;
         line-height: 20px;
       }
-      /* dt요소 굵게, 색상 purple */
+      /* dt 요소 : 굵게, 색상:purple */
       dt {
         font-weight: bold;
         color: purple;
       }
-      /* section: width 80%, border 5px, 실선, #333, 패딩 5px */
+
+      /* section : width:80%, border:5px, 실선, #333, 패딩;5px */
       section {
         width: 80%;
         border: 5px solid #333;
         padding: 5px;
       }
+
       /* article h3 : 배경이미지(bg1.png), 반복안함, 위치 상단 가운데, 패딩 왼쪽만 30px */
       article h3 {
-        background-image: url(bg1.png);
+        background-image: url("bg1.png");
         background-repeat: no-repeat;
         background-position: left center;
         padding-left: 30px;
       }
-      /* article : width:90% , 마진 위,아래는 20px, 왼,오 10px 패딩: 20px*/
-      .article {
+
+      /* article : width:90%, margin : 위,아래 20px,  왼,오 10px  패딩 : 20px */
+      article {
         width: 90%;
         margin: 20px 10px;
         padding: 20px;
       }
-      /* pet1 : border=>1px, 실선, blue, 테두리 둥글게20px */
+      /* pet1 : border=> 1px,실선,blue, 테두리 둥글게 20px */
       #pet1 {
         border: 1px solid blue;
         border-radius: 20px;
       }
-      /* pet2 : border=>1px, 점선, balck, 테두리 둥글게20px */
+      /* pet2 : border=> 1px,점선,black, 테두리 둥글게 20px */
       #pet2 {
         border: 1px dotted black;
         border-radius: 20px;
       }
-      /* pet3 : border=>2px, double, green, 테두리 둥글게30px(왼쪽상단, 오른쪽 하단) */
+      /* pet3 : border=> 2px,double,green, 테두리 둥글게 30px(왼쪽상단, 오른쪽하단) */
       #pet3 {
         border: 2px double green;
-        /* border-radius: 30px 0px 30px 0px; */
+        /* border-radius: 30px 0 30px 0; */
         border-top-left-radius: 30px;
         border-bottom-right-radius: 30px;
       }
