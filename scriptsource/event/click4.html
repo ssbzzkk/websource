@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 4/11 5교시 -->
+    <!-- 클릭 라디오 버튼에 사용하기 -->
+    <div>
+      <input type="radio" name="color" id="" data-color="lightblue" />파랑색
+      <input type="radio" name="color" id="" data-color="green" />녹색
+    </div>
+    <script>
+      //click2.html=> 이벤트 버블링 + data
+      function ChangeColor(e) {
+        console.log(e.target);
+        // data- 안에 있는 값 가져오는 방법, color대신에 넣어주면 됨
+        // console.log(e.target.dataset.color); //data- 는 dataset으로 접근
+        document.body.style.background = e.target.dataset.color;
+      }
+
+      //이벤트 대상이 되는 부모 찾기(div)
+      document.querySelector("div").addEventListener("click", ChangeColor);
+    </script>
+  </body>
+</html>

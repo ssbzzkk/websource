@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 4/11 4교시 -->
+    <!-- 클릭 라디오 버튼에 사용하기 -->
+    <div>
+      <input type="radio" name="color" id="" />파랑색
+      <input type="radio" name="color" id="" />녹색
+    </div>
+    <script>
+      //파랑클릭하면 배겨이 파랑, 녹색클릭하면 녹색
+
+      //이벤트 대상 먼저 찾기 (전체)
+      const rdos = document.querySelectorAll("[name='color']");
+      //   rdos[0].addEventListener("click", () => {
+      //     //body 색상 lightblue 바꾸기
+      //     document.body.style.background = "lightblue";
+      //   });
+      //   rdos[1].addEventListener("click", () => {
+      //     //body 색상 green
+      //     document.body.style.background = "green";
+      //   });
+
+      //다른 방법
+      function ChangeColor(color) {
+        document.body.style.background = color;
+      }
+      rdos[0].addEventListener("click", () => ChangeColor("lightblue"));
+      rdos[1].addEventListener("click", () => ChangeColor("green"));
+    </script>
+  </body>
+</html>

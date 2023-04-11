@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 4/11 3교시 -->
+    <!-- id랑 class 의 속성 을 갖고 있을 때 속성을 제거하고 싶으면 -->
+    <h1 id="header" class="header">Header 1</h1>
+    <h2 id="header2" class="header">Header 2</h2>
+    <div id="top">
+      <div id="nested">내용</div>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
+        recusandae enim obcaecati eveniet, ex laudantium dolorem tempore
+        voluptate? Inventore voluptatum illo perferendis tempore officia natus,
+        consequuntur quas accusantium voluptatibus adipisci.
+      </p>
+    </div>
+    <script>
+      //h1 태그 찾아오기
+      // const h1 = document.querySelector("h1");
+      //h1 remove함수 부르기
+      // h1.remove(); //제거됨
+
+      // '내용' 삭제하고 싶으면
+      // 내용 찾기
+      //   const nested = document.getElementById("nested");
+      //   //제거하기
+      //   nested.remove();
+
+      //부모 찾기
+      const div = document.querySelector("#top");
+      //부모 기준으로 제거대상 자식 찾기
+      const nested = document.getElementById("nested");
+      div.removeChild(nested);
+
+      //속성 제거하고 싶으면,
+      // 속성 셋팅하는(새로넣는) setAttribute(), 속성 제거하는 removeAttribute()
+      // class 속성 지우고 싶으면
+      // 위치 찾고
+      const h1 = document.querySelector("h1");
+      h1.removeAttribute("class"); //제거할 속성명
+      //동적으로 변화준건(script에서 변화준건) f12 의 Elements에 나타남
+
+      //h2의 id속성 제거하기
+      const h2 = document.querySelector("h2"); // 위치 찾고
+      h2.removeAttribute("id");
+
+      h2.innerHTML = "";
+    </script>
+  </body>
+</html>

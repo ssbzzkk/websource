@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 4/11 3교시 -->
+    <h1 id="header" class="one two">Header 1</h1>
+
+    <script>
+      //class 변경하고 싶으면
+      // 해당 요소 갖고오기
+      let h1 = document.getElementById("header");
+      console.log(h1.classList); //전체 클래스명 가져오기 , f12에 DOMTokenList(2)
+
+      //특정 클래스명 변경하고 싶으면
+      h1.classList.replace("one", "header"); // one을 header로 바꾸기
+
+      //클래스 추가하고 싶으면
+      h1.classList.add("three"); //클래스명에 three 가 추가됨
+
+      //추가를 할 때 이미 클래스명이 존재한다면 안 붙이고, 없을때만 추가하고 싶으면
+      h1.classList.toggle("four");
+      h1.classList.toggle("two"); //toggle 하니깐 two가 사라지네? ???
+    </script>
+  </body>
+</html>

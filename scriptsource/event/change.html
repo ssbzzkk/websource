@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 커서가 깜빡이면 포커스를 받았다고 함.
+        포커스 받거나 뺐을때 이벤트를 주고싶으면
+    -->
+    <div>
+      <label for="word1">word1</label>
+      <input type="text" name="word1" id="word1" value="ABCDE" />
+    </div>
+
+    <div>
+      <label for="word2">word2</label>
+      <input type="text" name="word2" id="word2" value="ABCDE" />
+    </div>
+
+    <div>
+      <label for="word3">word3</label>
+      <input type="text" name="word3" id="word3" value="ABCDE" />
+    </div>
+    <p>입력 필드를 벗어나면 소문자로 변경됩니다.</p>
+
+    <select name="fruits" id="fruits">
+      <option value="사과">사과</option>
+      <option value="오렌지">오렌지</option>
+      <option value="딸기">딸기</option>
+      <option value="바나나">바나나</option>
+      <option value="망고">망고</option>
+    </select>
+
+    <script>
+      // change : 값의 변화가 일어난 후 포커스를 잃어버릴때 발생함
+      //, blur : 일단 포커스가 빠지기만 하면(값의변화랑 관계없이)
+      // input : 입력되는 시점
+      // word1,2 찾아오기
+      document
+        .querySelector("#word1")
+        .addEventListener(
+          "change",
+          (e) => (e.target.value = e.target.value.toLowerCase())
+        );
+      //e.target.value 는 입력창에 뭔가 적은것 가져오기
+      // = e.target.value.toLowerCase() value(text)가져온거를 어떻게 바꿀건지(toLowerCase)
+
+      document.querySelector("#word2").addEventListener("blur", (e) => {
+        // console.log(e.target);
+        e.target.value = e.target.value.toLowerCase();
+      });
+
+      //입력 누를때마다 실시간으로 이벤트 발생
+      document.querySelector("#word3").addEventListener("input", (e) => {
+        console.log("word3", e.target);
+        e.target.value = e.target.value.toLowerCase();
+      });
+
+      document
+        .querySelector("select")
+        .addEventListener("change", (e) => console.log(e.target.value));
+    </script>
+  </body>
+</html>

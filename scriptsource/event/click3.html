@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 4/11 5교시 -->
+    <!-- 클릭 라디오 버튼에 사용하기 -->
+    <div>
+      <!-- 라디오 속성에는 꼭 value를 넣어야 함 -->
+      <input type="radio" name="gender" id="" value="남" />남
+      <input type="radio" name="gender" id="" value="여" />여
+    </div>
+    <script>
+      //이벤트 대상 먼저 찾기 (전체)
+      // const rdos = document.querySelectorAll("[name='gender']");
+      // console.log(rdos); // querySelectorAll 로 가져오면 NodeList로 넘어와서 forEach(대표적인 화살표 함수) 쓸 수 있음
+
+      // //  변수명(element) 는 마음대로
+      // rdos.forEach((rdo) => {
+      //   // console.log(rdo);
+      //   rdo.addEventListener("click", (e) => {
+      //     // 사용자가 선택한 값을 가져오기(이벤트가 일어난 대상의 값을 가져오겠다)
+      //     // console.log(e.target);
+      //     //form요소들의 값을 가져오기 위해서는 value를 써야함
+      //     console.log(e.target.value); //value자동완성 안됨
+      //   });
+      // });
+
+      //이벤트 버블링 개념으로 해보기
+      const div = document.querySelector("div");
+      div.addEventListener("click", (e) => {
+        console.log(e.target.value);
+      });
+    </script>
+  </body>
+</html>

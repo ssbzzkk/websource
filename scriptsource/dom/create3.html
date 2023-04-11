@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 4/11 1교시 -->
+    <script>
+      // <img src='' alt=''> 태그 만들고 싶으면
+
+      window.onload = function () {
+        //문서가 화면에 보여지면 이 function을 실행시켜주세요
+        const img = document.createElement("img");
+
+        // //속성 setAttribute
+        // img.setAttribute("src", "../image/dog1.jpg");
+        // img.setAttribute("art", "강아지"); //art는 시각장애인을 위해
+
+        //좀더 쉽게는
+        img.src = "../image/dog1.jpg";
+        img.alt = "강아지";
+        //   body에 밀어넣기
+        document.body.appendChild(img);
+      };
+    </script>
+  </body>
+</html>
