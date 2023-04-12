@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div * {
+        padding: 10px;
+        margin: 10px;
+      }
+      [readonly] {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>숫자 맞추기 게임</h3>
+    <p>
+      이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다.
+      <br />
+      숫자는 1~100사이에 있습니다.
+    </p>
+    <div>
+      <label for="num1">숫자(입력)</label>
+      <input type="text" name="num1" id="num1" size="5" />
+      <button type="button">정답 확인</button>
+    </div>
+    <div>
+      <label for="count">추측횟수</label>
+      <input type="text" name="count" id="count" size="5" readonly />
+    </div>
+    <div>
+      <label for="hint">힌트</label>
+      <input type="text" name="hint" id="hint" size="30" readonly />
+    </div>
+
+    <script>
+      // 1. 임의의 숫자 생성
+      const random = Math.floor(Math.random() * 100) + 1;
+      console.log(random);
+      //추측횟수 변수 생성 (횟수가 계속 바뀌어야 해서 let으로 함. const는 안바뀌는것)
+      let nGuess = 0;
+
+      //2. 정답 확인 클릭시,
+      const btn = document.querySelector("[type='button']");
+      btn.addEventListener("click", (e) => {
+        //사용자입력값가져오기
+        let inputNum = Number(document.getElementById("num1").value);
+        //3. 추측횟수 +1 화면에 보여주기
+        nGuess++;
+        document.querySelector("#count").value = nGuess;
+        //4. 입력값과 컴퓨터 생성 값 비교 후
+        //죄송합니다. 추척값이 적습니다. 많습니다. 힌트에 보여주기
+        let result = "";
+        if (inputNum < random) {
+          result = "up";
+        } else if (inputNum > random) {
+          result = "down";
+        } else if (inputNum == random) {
+          result = "정답!";
+          btn.disabled = "true";
+        }
+        document.querySelector("#hint").value = result;
+        //정답을 구했으면 더 이상 버튼 못누르게 하기
+      });
+    </script>
+  </body>
+</html>

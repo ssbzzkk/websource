@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 150px;
+        overflow: auto;
+        /*hidden은 그냥 숨겨버리고 auto는 스크롤 나옴
+          회원 약관같은거는 auto로 , 
+          다 읽었는지 확인하기 위해 스크롤 이벤트걸어서
+        */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, autem
+      necessitatibus sapiente ea, tenetur ut ipsa officiis officia, nostrum
+      labore quidem aliquid odit atque? Vitae consectetur dolor eveniet rem
+      autem nobis aut quia culpa tenetur sunt sequi ipsum, repellendus quisquam
+      soluta adipisci inventore voluptas placeat sint voluptates earum
+      molestiae? Sequi culpa magni eaque minus libero eum tempora, autem sit
+      esse quisquam! Quo officiis aperiam, quisquam similique ipsum odit, vitae
+      delectus quae, maiores quibusdam modi vero fugit. Illum facilis quisquam
+      quasi minus, dignissimos laboriosam aliquid sint veniam cupiditate iure
+      harum eligendi commodi repellendus libero vitae officiis maxime soluta
+      obcaecati quam minima animi a dolore itaque facere? Officia quia quos
+      totam id, a nulla! Corporis molestiae natus quia cum explicabo veniam
+      soluta porro. Rerum commodi quis placeat odit expedita modi ex, nihil
+      mollitia non minima dicta iusto totam cupiditate amet perferendis adipisci
+      assumenda nobis provident sed sunt pariatur sit quaerat repellat officiis?
+      Illum porro earum, magnam inventore fuga asperiores doloribus quidem enim
+      assumenda eveniet vero omnis et. Adipisci quasi a pariatur tenetur
+      doloribus. Inventore repellat quam dolores est aut provident asperiores?
+      Mollitia obcaecati facere, sit hic sequi alias blanditiis, consectetur
+      totam voluptas nemo, dignissimos vitae autem tenetur molestias voluptatum
+      sint. Voluptatum cupiditate maxime iure doloremque perspiciatis nesciunt
+      asperiores omnis illo sit est, tempora reprehenderit nam blanditiis,
+      labore eaque consequatur autem cum voluptate! Architecto in fuga excepturi
+      laborum praesentium dolor sed ipsa recusandae enim perferendis distinctio
+      doloremque totam, ab libero consequatur alias inventore dignissimos rerum
+      deleniti? Harum similique nostrum necessitatibus autem voluptatum fuga
+      aspernatur? Dolorem eos repellendus ab quidem recusandae. Nam ex maxime
+      natus ipsum voluptates vitae aliquam obcaecati placeat temporibus odit
+      pariatur consequatur incidunt fugiat libero quam, corrupti quos. Aperiam
+      eaque, facilis fuga, assumenda nisi facere nostrum nesciunt voluptate
+      officia voluptatibus alias porro velit soluta culpa atque reiciendis
+      laboriosam eius accusamus nemo suscipit dolorum, ipsum vel ex. Illum,
+      iusto, deserunt aspernatur aut dolorum assumenda iure nostrum qui
+      recusandae consectetur a sunt ipsam quas vero, nisi porro enim. Fugiat
+      facere consequatur labore rem amet provident voluptatibus laboriosam sit,
+      dolor quis illo molestiae perspiciatis! Aut, laudantium. Dolor mollitia
+      alias rerum distinctio. Ad autem ipsum, expedita nihil quaerat
+      perspiciatis dolorem atque quibusdam deleniti error, quas minima
+      reprehenderit eaque velit excepturi aperiam ea. Praesentium, fuga est
+      labore ducimus expedita ratione laborum dicta tempore odit quis distinctio
+      saepe esse perferendis natus provident. Labore laborum quod veniam
+      perferendis dolorem doloremque pariatur quas, unde, itaque quasi officiis!
+      Exercitationem at recusandae impedit illo cumque fugiat atque ullam!
+      Obcaecati debitis porro ab nihil velit quibusdam a, suscipit officia sequi
+      officiis minus alias impedit esse deleniti cumque atque maxime fuga itaque
+      et, inventore fugit aut placeat? Cum, fugiat ex incidunt quia nemo
+      impedit, cumque, sint deleniti voluptas illo ullam nihil mollitia. Error
+      totam nobis, vero voluptatem possimus beatae, minima eius molestiae vitae
+      sit iure nostrum ab quo exercitationem illo commodi temporibus quis
+      voluptate perspiciatis magnam aperiam quibusdam animi. Nulla ratione,
+      atque officia aliquam inventore ea eveniet mollitia, possimus eum
+      repudiandae consequuntur, cupiditate eaque maxime consectetur fugit? Minus
+      quisquam iusto praesentium qui voluptatibus!
+    </div>
+    <script>
+      const div = document.querySelector("div");
+
+      console.log("들어가기 전");
+
+      console.log("top", div.scrollTop);
+      console.log("height", div.scrollHeight); //스크롤 높이+div height(보이는 높이)
+      console.log("client", div.clientHeight); //div height 높이
+
+      // scrollHeight = scrollTop(읽은양) + clientHeight (보여지는 높이)
+
+      div.addEventListener("scroll", () => {
+        console.log("top", div.scrollTop);
+        console.log("client height", div.clientHeight);
+        console.log("scrollhe", div.scrollHeight);
+
+        //현재 스크롤 위치
+        //div안의 스크롤이 끝에 왔는지 확인하고 alert 하는 이벤트
+        //회원약관을 다 읽었습니다.
+        if (div.scrollTop + div.clientHeight > div.scrollHeight) {
+          alert("회원약관을 다 읽었습니다.");
+        }
+      });
+    </script>
+  </body>
+</html>

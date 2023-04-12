@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" name="text1" id="text1" />
+      <!-- <input type="button" value="제출" /> -->
+      <input type="submit" value="제출" />
+    </form>
+    <p id="result"></p>
+    <a href="https://www.naver.com">네이버</a>
+    <script>
+      //버튼 클릭 시 사용자가 입력한 값 가져와서 result안에 보여주기
+      //대상찾기
+      // document
+      //   .querySelector("[type='button']")
+      //   .addEventListener("click", () => {
+      //     document.getElementById("result").innerHTML =
+      //       document.getElementById("text1").value;
+      //   });
+
+      //submit : 폼이 서버로 전송 (action 에 지정한 곳으로)
+      //          action 을 안쓰면 현재주소임
+      //button type='submit'
+      // 태그에 이벤트가 들어있는 형태가 있음(submit, a태그)
+      // => 바로 실행되기 때문에 이벤트를 막아야 함
+      // e.preventDefault(**) : 이벤트 중지
+      document
+        .querySelector("[type='submit']")
+        .addEventListener("click", (e) => {
+          e.preventDefault(); //submit 중지시켜줘
+
+          document.getElementById("result").innerHTML =
+            document.getElementById("text1").value;
+        });
+
+      //네이버가 클릭 되면 요소 가져와서 구글로 바꾸기
+      // href 구글 주소로 변경
+      // text도 구글로 변경
+      // 속성 바꾸기 img.src="바꿀경로"
+      document.querySelector("a").addEventListener("click", (e) => {
+        e.preventDefault(); //이동막기
+        e.target.href = "https://www.google.com";
+        e.target.innerHTML = "구글";
+        //구글주소로 이동시키기 , location.href =
+        location.href = e.target.href;
+      });
+    </script>
+  </body>
+</html>

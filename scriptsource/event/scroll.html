@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 4000px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //스크롤 현재 위치 확인하기
+      window.addEventListener("scroll", () => {
+        //수직 스크롤바 위치를 px단위로 알려주는 속성(property)
+        // console.log(window.scrollY);
+
+        window.scrollTo(0, 200); // 수직방향으로 200px 강제 이동
+
+        window.scrollBy(0, 150); //현재위치에서 수직으로 +150px 만큼 이동
+
+        console.log(window.scrollY);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div>
+        <label for="username">이름 : </label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div>
+        <label for="password">비밀번호 : </label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <label for="age">나이 : </label>
+        <input type="text" name="age" id="age" />
+      </div>
+      <div>
+        <button type="submit">전송</button>
+      </div>
+    </form>
+
+    <script>
+      // 폼이 전송(전송버튼이 클릭되면)되기 전에 사용자가 값을 제대로 입력했는지 확인하고 싶음
+      // 비어있는지 확인 (값이 비어있다면 경고창 띄우기), 이름을 입력해 주세요!
+
+      //방법1
+      // document.querySelector("[type='submit']").addEventListener("click", (e)=>{
+      //     e.preventDefault(); //일단 submit막아줘
+      //     //이후에 요소 점검
+      // })
+
+      //방법2 (아예 form 찾기)
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault(); //일단 submit막아줘
+        //이후에 요소 점검 (안들어왔으면 alert, 해당위치 포커스)
+
+        const username = document.getElementById("username");
+        const password = document.getElementById("password");
+        const age = document.getElementById("age");
+
+        console.log("username", username.value);
+
+        if (username.value == "") {
+          alert("이름을 입력하세요");
+          username.focus();
+          return;
+        } else if (password.value == "") {
+          alert("password을 입력하세요");
+          password.focus();
+          return;
+        } else if (age.value == "") {
+          alert("age 입력하세요");
+          age.focus();
+          return;
+        }
+
+        //폼 전송
+        document.querySelector("form").submit();
+      });
+    </script>
+  </body>
+</html>
