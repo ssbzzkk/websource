@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        background-color: lightblue;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+      .container li {
+        margin: 0 10px;
+        width: 25%;
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="container">
+      <li>메뉴1</li>
+      <li>메뉴2</li>
+      <li>메뉴3</li>
+      <li>메뉴4</li>
+    </ul>
+    <div></div>
+
+    <script>
+      //response.json() : json 응답을 자바스크립트 객체로 파싱
+      //JSON.stringify(data) : 자바스크립트 객체를 json으로 변경
+
+      // 메뉴 2 클릭하면
+      // 서버에서 versions.json 가져와서 화면에 보여주기(화면 fefresh없이)
+      const li = document.querySelector(".container li:nth-child(2)");
+
+      li.addEventListener("click", () => {
+        fetch("https://ssbzzkk.github.io/data/versions.json")
+          .then((Response) => Response.json())
+          .then((data) => { console.log(data));
+
+          let result="<ul>"
+            data.forEach((item) => {
+              result+="<li>version : " item.version +"</li>"
+              result+="<li>codename : " item.codename"</li>"
+            });
+            result +="</ui>"
+          });
+          document.querySelector("div").innerHTML=result
+      });
+
+      //.다시보기
+    </script>
+  </body>
+</html>

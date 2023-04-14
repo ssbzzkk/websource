@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        background-color: lightblue;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+      .container li {
+        margin: 0 10px;
+        width: 25%;
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="container">
+      <li>메뉴1</li>
+      <li>메뉴2</li>
+      <li>메뉴3</li>
+      <li>메뉴4</li>
+    </ul>
+    <div></div>
+
+    <script>
+      //response.json() : json 응답을 자바스크립트 객체로 파싱
+      //JSON.stringify(data) : 자바스크립트 객체를 json으로 변경
+
+      // 메뉴 2 클릭하면
+      // 서버에서 version.json 가져와서 화면에 보여주기(화면 fefresh없이)
+      const li = document.querySelector(".container li:nth-child(2)");
+
+      // 화살표 함수특징
+      // 실행할 문장이 하나라면{} 없어도 됨, 중괄호없어지면 return키워드도 생략 가능
+      // json() 이 (data)로 들어감
+
+      li.addEventListener("click", () => {
+        fetch("https://ssbzzkk.github.io/data/version.json")
+          .then((Response) => Response.json())
+          .then((data) => {
+            console.log(data);
+
+            let result = "<ul><li>";
+            result += "version: " + data.version + "<li>";
+            result += "codename: " + data.codename + "<li>";
+            result += "</ul>";
+
+            document.querySelector("div").innerHTML = result;
+          });
+      });
+    </script>
+  </body>
+</html>
