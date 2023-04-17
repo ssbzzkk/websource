@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 4/11 3교시 -->
+    <h1 id="header" class="one two">Header 1</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+      //class 변경하고 싶으면
+      // 해당 요소 갖고오기
+      let h1 = $("#header");
+      console.log(h1.classList); //전체 클래스명 가져오기 , f12에 DOMTokenList(2)
+
+      //특정 클래스명 변경하고 싶으면
+
+      //클래스 추가하고 싶으면
+      h1.addClass("red");
+      //추가를 할 때 이미 클래스명이 존재한다면 삭제, 없을때만 추가하고 싶으면
+      h1.toggleClass("green");
+      h1.toggleClass("red");
+      //클래스 이름 제거
+      h1.removeClass("one");
+
+      console.log(h1.hasClass("red"));
+    </script>
+  </body>
+</html>

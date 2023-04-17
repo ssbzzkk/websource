@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        font-size: 35px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 4/11 4교시 -->
+
+    <table id="outside">
+      <tr>
+        <td id="t1">one</td>
+      </tr>
+      <tr>
+        <td id="t2">two</td>
+      </tr>
+    </table>
+
+    <p id="demo">Click me</p>
+
+    <a href="#">여기로</a>
+    <!-- a테그는 마우스 올리면 손모양 나옴, style에서 cursor: pointer; 하면 손모양 나옴-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+      // 사용자가 테이블 전체 클릭시 two,three 가 번갈아 가면서 보이기
+      // 우선 이벤트 대상 찾고
+      const table = $("#outside"); //.getElementById("outside") or querySelector("#outside")
+      // 이벤트 핸들러 연결하기
+      table.on("click", function () {
+        // two를 갖고 있는 td요소 가져오기
+        const t2 = $("#t2");
+        // td 요소안의 text 가 무엇인지 확인하기, three인지 아닌지를 isThree에 담아서
+        const isThree = t2.text() === "three";
+
+        // two면 three로 text 변경 (3항연산자 써서)
+        t2.text(isThree ? "tow" : "three");
+      });
+
+      // p요소 클릭 시 텍스트 문자 변경하기
+      // good job!! 으로 변경하도록
+
+      $("#demo").on("click", function (e) {
+        //현재 이벤트가 일어난 대상 찾기, ()안에 변수 지정 , 주로 e 많이 씀
+        console.log(e.target);
+        $(this).text("good job");
+      });
+    </script>
+  </body>
+</html>
